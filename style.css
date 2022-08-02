@@ -1,0 +1,273 @@
+/* Auteur: Sergio Da Costa
+   Projet: P-WebStat
+   Date: 2020
+   classe: Fin1 */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.content{
+    padding:0 10% 0 10%;
+}
+
+
+   
+header > div {
+
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    background-color: red;
+    color:white;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 50px;
+    padding: .5em;
+}
+
+header > ul {
+    padding:.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 30%;
+    background-color:red;
+    color:white;
+    margin-top: 0;
+    transition: height .5s;
+    height: 0;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header > ul > li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+/* Animation menu */
+.menu-btn {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    transition: all .5s ease-in-out;
+   
+}
+.menu-btn_burger {
+    width: 30px;
+    height:  3px;
+    background:white;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+}
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background:white;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before { 
+    transform: translateY(-16px);
+}
+
+.menu-btn_burger::after {
+    transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn_burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/*Responsive Menu */
+@media screen and (max-width:1000px) {
+    header > div, header > ul{
+        width: 70%;
+    }
+}
+
+hr {
+color: white;
+width: 80%;
+}
+
+ul > li > a:hover, ul > li > a:focus {
+font-style: italic;
+}
+
+.titleMenu {
+    font-size: 40px;
+    color:white;
+    font-family: 'Righteous-Regular';
+    text-align: left;
+    margin-right: 30px;
+    margin-top: auto;
+}
+
+header > div:hover {
+    cursor: pointer;
+}
+
+header > div > p,
+header > div > i {
+    margin: 1em;
+
+}
+
+
+header > ul:target {
+    height: auto;
+}
+
+p {
+    margin: 0;
+    padding-bottom: 2%;
+}
+
+.galery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+ 
+.galleryPadding {
+    padding: 10px;
+}
+
+@font-face {
+    font-family:'GochiHand-Regular'; 
+    src: url(Font/GochiHand-Regular.ttf); 
+}
+
+
+@font-face {
+    font-family:"Righteous-Regular";
+    src: url(Font/righteous-v9-latin-regular.ttf);
+    
+}
+
+.textMenu {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    font-size: 80px;
+    color:white;
+    font-family: 'Righteous-Regular';
+    text-align: left;
+    margin-top: 10%;
+}
+
+.subTitle {
+    font-family: 'Righteous-Regular';
+    font-size: 40px;
+    color: white;
+}
+
+.textIntro {
+    color: white;
+    text-align: center ;
+    font-family: 'Righteous-Regular';
+    font-size: 80px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.textBase {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: white;
+ 
+}
+
+.textPadding {
+    padding-left: 32%;
+}
+
+.legend {
+    font-family: 'Righteous-Regular';
+    font-size: 20px;
+    color: white;
+}
+
+.image {
+float: left;
+width: 400px;
+margin-right: 2em;
+}
+
+.sizeImage {
+    width: 500px;
+    padding: 10px;
+    border: white;
+}   
+
+form {
+    line-height: 30px;
+    display: grid;
+    margin-top: 10%;
+}
+
+form >  label {
+    font-family: 'Righteous-Regular';
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+    color: white;;
+    
+}
+
+form > input {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(230, 230, 230);
+}
+
+form > textarea {
+    background-color: rgb(230, 230, 230);
+}
+
+.button {
+    margin-top: 10px;
+    
+   
+}
+.graphique {
+    width: 500px;
+    float: left;
+}
+
+footer > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
